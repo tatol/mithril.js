@@ -1067,7 +1067,7 @@ var parseQueryString = function(string) {
 	return data0
 }
 var coreRouter = function($window) {
-	var supportsPushState = typeof $window.history.pushState === "function"
+	var supportsPushState = false // typeof $window.history.pushState === "function"
 	var callAsync0 = typeof setImmediate === "function" ? setImmediate : setTimeout
 	function normalize1(fragment0) {
 		var data = $window.location[fragment0].replace(/(?:%[a-f89][a-f0-9])+/gim, decodeURIComponent)
